@@ -1,14 +1,14 @@
 <template>
-    <user-form></user-form>
+    <user-login></user-login>
 </template>
 
 <script>
-    import UserForm from '~/components/UserForm'
+    import UserLogin from '~/components/UserLogin'
 
     export default {
         layout: 'guest',
         components: {
-            'userForm': UserForm
+            'userLogin': UserLogin
         }
     }
 </script>

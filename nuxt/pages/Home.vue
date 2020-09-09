@@ -6,7 +6,7 @@
     import List from '~/components/List'
 
     export default {
-        layout: 'user',
+        layout: 'app',
         middleware: 'auth',
         components: {
             'list': List
