@@ -2,7 +2,11 @@
     <div class="row justify-content-center">
         <div class="col-8">
             <div v-if="error" class="alert alert-danger" role="alert">{{error}}</div>
-            <pre v-if="result">{{result}}</pre>
+            <div class="card mb-3" v-if="result">
+                <div class="card-body">
+                    <pre class="m-0">{{result}}</pre>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-header">User Form Data</div>
                 <div class="card-body">
