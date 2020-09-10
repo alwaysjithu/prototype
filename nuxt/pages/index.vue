@@ -9,6 +9,10 @@
         layout: 'guest',
         components: {
             'userForm': UserForm
+        },head() {
+            return {
+                title: 'Form Data'
+            }
         }
     }
 </script>

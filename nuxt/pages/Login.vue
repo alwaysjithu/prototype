@@ -9,6 +9,11 @@
         layout: 'guest',
         components: {
             'userLogin': UserLogin
+        },
+        head() {
+            return {
+                title: 'Login'
+            }
         }
     }
 </script>

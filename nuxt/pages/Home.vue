@@ -10,6 +10,11 @@
         middleware: 'auth',
         components: {
             'list': List
+        },
+        head() {
+            return {
+                title: 'Dashboard'
+            }
         }
     }
 </script>
