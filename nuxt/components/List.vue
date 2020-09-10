@@ -49,7 +49,7 @@
             logout() {
                 this.$axios.$post('logout').then(response => {
                     this.$store.dispatch('logout');
-                    this.$router.push('/');
+                    this.$router.push('/login');
                 }).catch(error => {
                     this.error = error.response.data.message
                 });

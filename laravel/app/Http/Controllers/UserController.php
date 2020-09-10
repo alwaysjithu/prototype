@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\Helper;
 use App\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -55,6 +56,18 @@ class UserController extends Controller
         try {
             $request->user()->token()->revoke();
             return $this->successResponse('User sign out successfully');
+        } catch (Exception $e) {
+            return $this->errorResponse($e->getMessage(), $e->getCode());
+        }
+    }
+
+    /**
+     * User postData
+     */
+    public function postData(Request $request)
+    {
+        try {
+            return $this->dataResponse(Helper::curlPost($request->all()));
         } catch (Exception $e) {
             return $this->errorResponse($e->getMessage(), $e->getCode());
         }

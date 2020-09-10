@@ -5,6 +5,9 @@ module.exports = {
     env: {
         baseUrl: process.env.API_URL
     },
+    router: {
+        linkExactActiveClass: 'active'
+    },
     modules: [
         'bootstrap-vue/nuxt',
         '@nuxtjs/axios',
